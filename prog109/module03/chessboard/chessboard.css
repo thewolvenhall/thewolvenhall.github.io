@@ -63,3 +63,9 @@ img {
   padding: 10px;
   margin:10px;
 }
+
+.centeral {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
