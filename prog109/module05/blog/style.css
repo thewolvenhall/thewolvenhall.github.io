@@ -1,0 +1,74 @@
+.clear {
+  clear: both;
+}
+
+body {
+  background-img: url("../pictures/blogbg.jpg");
+}
+h3 {
+  color: #ffffff;
+  font-family: 'DraughtsmanARegular';
+}
+#headimg {
+  width: 400px;
+  float: right;
+}
+#headtext {
+  text-align: center;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 50%;
+}
+header {
+  overflow: auto;
+  border-width: 3px;
+  border-color: #663399;
+  border-style: dashed;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #000000;
+}
+footer {
+  border-width: 3px;
+  border-color: #663399;
+  border-style: dashed;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: #000000;
+}
+article {
+  display: inline-block;
+  background-color: #663399;
+  padding: 1%;
+  margin: 1%;
+  margin-left: 20%;
+  border-radius: 25px;
+  width: 500px;
+  float: left;
+}
+p {
+  color: #ffffff;
+  font-family: 'RawlineLight';
+}
+a {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  border: solid 1px;
+  border-color: #ffffff;
+  width: 100px;
+  margin: 5px;
+}
+section {
+  color: #ffffff;
+}
+#sidebar {
+  float: right;
+  margin-left: 0%;
+  margin-right: 20%;
+  width: 300px;
+  text-align: center;
+}
