@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jeopardy 2: electric boogaloo</title>
+    <style>
+      img {
+        width: 300px;
+        float: right;
+      }
+      div {
+        overflow: auto;
+        border: solid 2px;
+        border-color: #000000;
+        background-color: #ffffff;
+        padding: 5%;
+        width: 650px;
+        margin-left: 24%;
+        margin-top: 5%;
+      }
+      body {
+        background-image: url("schoolsupply.png");
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+    <img src="https://us.123rf.com/450wm/lineartestpilot/lineartestpilot1603/lineartestpilot160329033/54020959-stock-vector-freehand-drawn-cartoon-math-symbols.jpg?ver=6" alt="math clipart">
+    <h1>Simple Math Quiz</h1>
+    <script>
+      var myName = prompt("Hello! What is your name?");
+      totalScore = 0;
+      var q1 = prompt("Q1. (8*4)+(9*7)");
+      if(q1 == 95) {
+        totalScore++;
+        alert("Correct!");
+      }
+      else {
+        alert(q1 + " is incorrect. The correct answer is 95.");
+      }
+      var q2 = prompt("Q2. 9+(2+5*3)");
+      if(q2 == 26) {
+        totalScore++;
+        alert("Correct!");
+      }
+      else {
+        alert(q2 + " is incorrect. The correct answer is 26.");
+      }
+      var q3 = prompt("Q3. 4-1(3*6-2)");
+      if(q3 == -12) {
+        totalScore++;
+        alert("Correct!");
+      }
+      else {
+        alert(q3 + " is incorrect. The correct answer is -12.");
+      }
+      var q4 = prompt("Q4. (7-3)-(6*2-12)");
+      if(q4 == 4) {
+        totalScore++;
+        alert("Correct!");
+      }
+      else {
+        alert(q4 + " is incorrect. The correct answer is 4.");
+      }
+      var q5 = prompt("Q5. 2(14-8)+1");
+      if(q5 == 13) {
+        totalScore++;
+        alert("Correct!");
+      }
+      else {
+        alert(q5 + " is incorrect. The correct answer is 13.");
+      }
+      if(totalScore == 5) {
+        document.write("Congratulations, " + myName + "! You earned a perfect score of 5/5!");
+      }
+      else if(totalScore == 0) {
+        document.write(myName + ", you earned an unfortunate score of 0/5.");
+      }
+      else {
+        document.write("Well done, " + myName + ", you earned a score of " + totalScore + "/5.");
+      }
+    </script>
+    </div>
+  </body>
+</html>
