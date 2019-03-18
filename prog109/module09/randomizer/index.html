@@ -4,12 +4,107 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>dessert randomizer</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/grundschrift" type="text/css"/>
     <link rel="stylesheet" href="main.css">
-    <script src="java.js"></script>
   </head>
   <body>
-    <div id="container">
-      <div id="output"></div>
+    <div id="shopkeep">
+      <img src="bag random.png" alt="a dessert box">
+      <hr>
+      <img src="shopkeeper random.png" alt="a shopkeeper">
     </div>
+    <div id="output">
+      <script>
+        var dessert = {
+          type: getType(),
+          flavor: getFlavor(),
+          nut: getNut(),
+          valSavory: getSavory(),
+          valSweet: getSweet(),
+          valSour: getSour(),
+          valBitter: getBitter()
+        }
+        function getType() {
+          types = ["Cake","Candy","Cookie","Pudding","Doughnut","Pastry","Tart"];
+          yourType = Math.floor(Math.random()*7);
+          return types[yourType];
+        }
+        function getFlavor() {
+          flavors = ["Apple","Apricot","Banana","Blackberry","Blueberry","Cherry","Coconut","Grape","Lemon","Lime","Melon","Orange","Pear","Pineapple","Pomegranate","Raspberry","Strawberry"];
+          yourFlavor = Math.floor(Math.random()*18);
+          return flavors[yourFlavor];
+        }
+        function getNut() {
+          nuts = ["Almond","Hazelnut","Chestnut","Walnut","None","None","None","None","None","None"];
+          yourNut = Math.floor(Math.random()*10);
+          return nuts[yourNut];
+        }
+        function getSavory() {
+          savoryVal = Math.floor(Math.random()*5);
+          return savoryVal;
+        }
+        function getSweet() {
+          sweetVal = Math.floor(Math.random()*20+5);
+          return sweetVal;
+        }
+        function getSour() {
+          sourVal = Math.floor(Math.random()*10);
+          return sourVal;
+        }
+        function getBitter() {
+          bitterVal = Math.floor(Math.random()*10);
+          return bitterVal;
+        }
+        
+        var yourName = prompt("It's a beautiful spring day today! What's your name?");
+        var answer1 = confirm(yourName + ", you head out to pick up a dessert. You see a bakery with a table of blind bag desserts! Will you choose a blind bag?");
+        if(answer1 == true) {
+          var truea2 = confirm("The blind bag costs 7 dollars. Buy it?");
+          if(truea2 == true){
+            var output = document.getElementById("output");
+            var msg;
+            msg = "<p>Here's a dessert for you!</p>" + "<p>Type: " + dessert.type + "<br>Flavor: " + dessert.flavor + "<br>Nuts: " + dessert.nut + "</p><p>Stats:<br>Savory: " + dessert.valSavory + "<br>Sweet: " + dessert.valSweet + "<br>Sour: " + dessert.valSour + "<br>Bitter: " + dessert.valBitter + "</p>";
+            output.innerHTML = msg;
+          }
+          else {
+            dessert.type = "Pastry";
+            dessert.flavor = "Strawberry";
+            dessert.nut = "None";
+            dessert.valSavory = 1;
+            dessert.valSweet = 15;
+            dessert.valSour = 7;
+            dessert.valBitter = 0;
+            var output = document.getElementById("output");
+            var msg;
+            msg = "<p>You head inside the bakery and get a strawberry pastry instead.</p>" + "<p>Type: " + dessert.type + "<br>Flavor: " + dessert.flavor + "<br>Nuts: " + dessert.nut + "</p><p>Stats:<br>Savory: " + dessert.valSavory + "<br>Sweet: " + dessert.valSweet + "<br>Sour: " + dessert.valSour + "<br>Bitter: " + dessert.valBitter + "</p>";
+            output.innerHTML = msg;
+          }
+        }
+        else {
+          var falsea2 = confirm("There are strawberry pastries inside. Buy one of those?");
+          if(falsea2 == true) {
+            dessert.type = "Pastry";
+            dessert.flavor = "Strawberry";
+            dessert.nut = "None";
+            dessert.valSavory = 1;
+            dessert.valSweet = 15;
+            dessert.valSour = 7;
+            dessert.valBitter = 0;
+            var output = document.getElementById("output");
+            var msg;
+            msg = "<p>Here's a strawberry pastry!</p>" + "<p>Type: " + dessert.type + "<br>Flavor: " + dessert.flavor + "<br>Nuts: " + dessert.nut + "</p><p>Stats:<br>Savory: " + dessert.valSavory + "<br>Sweet: " + dessert.valSweet + "<br>Sour: " + dessert.valSour + "<br>Bitter: " + dessert.valBitter + "</p>";
+            output.innerHTML = msg;
+          }
+          else {
+            var output = document.getElementById("output");
+            var msg;
+            msg = "<p>You head outside and get a blind bag instead.</p>" + "<p>Type: " + dessert.type + "<br>Flavor: " + dessert.flavor + "<br>Nuts: " + dessert.nut + "</p><p>Stats:<br>Savory: " + dessert.valSavory + "<br>Sweet: " + dessert.valSweet + "<br>Sour: " + dessert.valSour + "<br>Bitter: " + dessert.valBitter + "</p>";
+            output.innerHTML = msg;
+          }
+        }
+        
+      </script>
+    </div>
+    <div class="clear"></div>
   </body>
 </html>
