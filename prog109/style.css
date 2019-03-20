@@ -1,0 +1,54 @@
+body {
+  background-color: #2e2e2e;
+}
+h1 {
+  font-family: 'Montserrat';
+}
+h3 {
+  font-family: 'Montserrat';
+}
+p {
+  font-family: 'Karla';
+}
+header {
+  color: #ffffff;
+  text-align: right;
+  background-color: #000000;
+  padding: 1%;
+  padding-right: 9%;
+}
+.amenu {
+  text-decoration: none;
+  color: #ffffff;
+}
+.menu {
+  float: right;
+  background-color: #000000;
+  text-align: center;
+  padding: 3px;
+  margin: 1%;
+  width: 125px;
+}
+.menu:hover {
+  background-color: #27cca5;
+}
+.artifact {
+  text-decoration: none;
+  color: #000000;
+}
+.post {
+  float: left;
+  width: 600px;
+  background-color: #ffffff;
+  padding: 1%;
+  margin: 1%;
+  margin-left: 15%;
+}
+.post:hover {
+  background-color: #c0e6dd;
+}
+#mainpage {
+  float: right;
+  width: 452px;
+  margin: 1%;
+}
